@@ -1,0 +1,66 @@
+/***************************************************
+    SCSS Variables
+***************************************************/
+
+//  Grid Layout (10x10)
+$gridTempCols:      repeat(10, auto [col-start]);
+$gridTempRows:      repeat(10, auto [row-start]);          
+$gridTempAreas:     "hd hd hd hd hd hd hd hd hd hd"
+                    "mb mb mb mb mb mb mb mb mb mb"
+                    "mb mb mb mb mb mb mb mb mb mb"
+                    "mb mb mb mb mb mb mb mb mb mb"
+                    "mb mb mb mb mb mb mb mb mb mb"
+                    "mb mb mb mb mb mb mb mb mb mb"
+                    "mb mb mb mb mb mb mb mb mb mb"
+                    "mb mb mb mb mb mb mb mb mb mb"
+                    "mb mb mb mb mb mb mb mb mb mb"
+                    "ft ft ft ft ft ft ft ft ft ft";
+                          
+//  Styling                      
+$mainBgColor:     rgb(20, 20, 20);
+$mainBorderColor:   dashed 2px rgb(255, 175, 28);
+$mainColor:       rgb(255, 175, 28);
+$mainFont:          helvetica;
+$mainFontSize:      14px;
+
+
+
+/***************************************************
+    Body
+***************************************************/
+
+body {
+  background-color: $mainBgColor;
+  color: $mainColor;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+}
+
+
+
+/***************************************************
+    Grid Layout
+***************************************************/
+
+.full-height-container {
+  height: 100%;
+  width: 100%;
+  border: $mainBorderColor;
+  align-items: stretch;
+  display: grid;
+  grid-template-areas: $gridTempAreas;
+  grid-template-columns: $gridTempCols;
+  grid-template-rows: $gridTempRows;
+}
+
+.header { grid-area: hd; }
+.main-body { grid-area: mb; }
+.footer { grid-area: ft; }
+
+.header,
+.main-body,
+.footer {
+  border: $mainBorderColor;
+  margin: 15px;
+  padding: 0 15px 0 15px;
+}
