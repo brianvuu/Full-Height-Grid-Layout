@@ -11,7 +11,7 @@ body {
   width: 0;
 }
 ```  
-- Template can be easily modified with the predefined Sass variables.  
+- Template can be easily modified using the predefined Sass variables.  
 
 
 ## Sass / scss
